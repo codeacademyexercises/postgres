@@ -1,0 +1,21 @@
+{
+  "name": "postgresql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sequal.js",
+  "scripts": {
+    "migrationUp": "./node_modules/.bin/sequelize db:migrate",
+    "migrationDown": "./node_modules/.bin/sequelize db:migrate:undo:all",
+    "test": "NODE_ENV=test npm run migrationDown && NODE_ENV=test npm run migrationUp && jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^7.8.0",
+    "sequelize": "^4.42.0",
+    "sequelize-cli": "^5.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.1"
+  }
+}
